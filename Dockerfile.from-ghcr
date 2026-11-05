@@ -1,0 +1,8 @@
+# Образ берётся из удалённого репозитория GitHub Container Registry
+FROM ghcr.io/e-a-volobuev/githubdockerexample:latest
+
+# Дополнительные настройки при необходимости
+ENV ASPNETCORE_ENVIRONMENT=Production
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "GitHubDockerExample.dll"]
