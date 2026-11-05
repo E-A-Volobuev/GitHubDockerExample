@@ -2,7 +2,8 @@
 FROM ghcr.io/e-a-volobuev/githubdockerexample:latest
 
 # Дополнительные настройки при необходимости
-ENV ASPNETCORE_ENVIRONMENT=Production
+# Development — чтобы был доступен Swagger (в Production он отключён в Program.cs)
+ENV ASPNETCORE_ENVIRONMENT=Development
 EXPOSE 80
 
 ENTRYPOINT ["dotnet", "GitHubDockerExample.dll"]
